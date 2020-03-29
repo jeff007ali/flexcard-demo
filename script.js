@@ -1,8 +1,8 @@
 function callNewsApi() {
     var url = 'http://newsapi.org/v2/everything?' +
-          'q=coronavirus&' +
-          'sortBy=popularity&' +
-          'apiKey=cf0cba3704c24dda85bd20d224a7cc28';
+        'apiKey=cf0cba3704c24dda85bd20d224a7cc28&' +
+        'sortBy=popularity&' +
+        'q=coronavirus';
 
     var requestOptions = {
         method: 'GET',
