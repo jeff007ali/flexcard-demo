@@ -1,4 +1,5 @@
 .container {
+  /* position: absolute; */
   width: 450px;
   margin: 0 0 0 auto;
   padding: 0 20px;
@@ -22,8 +23,8 @@
 .card {
   width: 100%;
   position: relative;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
   background: #fefff9;
   color: #363636;
   text-decoration: none;
@@ -64,7 +65,7 @@
   display: block;
 }
 .card .card-summary {
-  padding: 5% 5% 3% 5%;
+  padding: 2% 2% 1% 2%;
 }
 .card .card-header {
   position: relative;
@@ -94,8 +95,8 @@
 }
 .card .card-title h3 {
   font-size: 1.2em;
-  line-height: 1.2;
-  padding: 0 3.5%;
+  line-height: 1.1;
+  padding: 0 2%;
   margin: 0;
 }
 .card .card-meta {
@@ -105,8 +106,8 @@
   font-size: .78em;
   text-transform: uppercase;
   position: absolute;
-  bottom: 5%;
-  padding: 0 5%;
+  bottom: 3%;
+  padding: 0 2%;
   -moz-transition-property: max-height;
   -o-transition-property: max-height;
   -webkit-transition-property: max-height;
@@ -120,16 +121,46 @@
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-.card:hover, .card:focus {
+.card .card-source {
+  max-height: 0;
+  overflow: hidden;
+  color: #666;
+  font-size: .78em;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  bottom: 3%;
+  padding: 0 2%;
+  -moz-transition-property: max-height;
+  -o-transition-property: max-height;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.card-hidden {
+  display: none;
+}
+
+.card:hover {
   background: white;
   -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
 }
-.card:hover .card-title, .card:focus .card-title {
+.card:hover .card-title {
   background: rgba(157, 187, 63, 0.95);
 }
-.card:hover .card-meta, .card:focus .card-meta {
+.card:hover .card-meta {
+  max-height: 1em;
+}
+.card:hover .card-source {
   max-height: 1em;
 }
 
@@ -143,6 +174,29 @@ body {
   line-height: 1.4;
   font-family: 'Jaldi', sans-serif;
 }
+
+/* Scrollbar - start */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+/* Scrollbar - end */
 
 * {
   -moz-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -moz-transform;
